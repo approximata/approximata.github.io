@@ -1,29 +1,52 @@
-h1 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: bold;
-  color: #222222;
+header {
+  font-family: 'Abril Fatface', cursive;
+  background:url(kbm.jpg);
+  background-size: cover;
+  height: 400px;
+  margin-top: 0px;
+  margin-bottom: 60px;
 }
-h2 {
-  color: rgba(0,0,0,.5);
+
+header h1 {
+  padding-top: 200px;
+  padding-left: 4em;
+  font-size: 58px;
+  color: #f8f3f3;
+  margin-top: 0px;
 }
-body {
- color: rgba(0,0,0,.8);
- margin: 0px;
- font-family: 'Merriweather', serif;
+
+span {
+  font-size: 38px;
 }
-article {
-  padding-left: 10px;
-  padding-right: 10px;
-  max-width: 720px;
-  margin-left:auto;
-  margin-right:auto;
+
+blockquote {
+  font-family: 'Abril Fatface', cursive;
+  width: 800px;
+  font-size: 45px;
+  text-align: left;
+  color: #FFFFFF;
+  margin: 55px auto;
+  background-color: black;
+  word-spacing: .5em;
 }
-img {
-  width: 100%
+
+blockquote strong {
+  font-size: 3em;
+
 }
-a {
-  font-style: italic;
-  font-weight: bold;
-  color: rgba(0,0,0,.8);
+
+section {
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+section h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+ul {
+    list-style-type: square;
 }
