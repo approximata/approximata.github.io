@@ -1,0 +1,227 @@
+body {
+  display: flex;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  }
+  /* ---------------------
+  Sidebar start*/
+aside {
+    background: #f6f6f6;
+    font-size: 12px;
+    font-family: sans-serif;
+    line-height: 13.5px;
+    order: 0;
+    flex: 1 0 175px;
+  }
+.sidemenu {
+    padding: 5px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+.sidemenu ul:first-child{
+    padding: 5px;
+  }
+
+.sidemenu ul{
+    padding: 0 15px;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+.sidemenu li{
+    list-style-type: none;
+  }
+h5{
+    margin: 2px 0;
+  }
+  /* ---------------------
+  Sidebar end*/
+
+  /* ---------------------
+  Header start*/
+
+header {
+  color: rgb(6, 69, 173);
+  font-family: sans-serif;
+  border-bottom: 1px solid #a7d7f9;
+  border-left: 1px solid #a7d7f9;
+  background: linear-gradient(to top, #f6f6f6, white);
+}
+
+.logoside{
+  background: linear-gradient(to top, #f6f6f6, white);
+}
+.firsttopnav{
+  justify-content: flex-end;
+  font-size: 12px;
+  padding-right: 7px;
+}
+.secondnav{
+  font-size: 13px;
+  padding: 16px 7px 0 0;
+}
+
+.secondnav ul li{
+  border-right: 1px solid #a7d7f9;
+}
+
+header nav li{
+  flex: 1 0 auto;
+  margin: 6px 0 0 9px;
+}
+.thirdleftpart, .thirdrightpart{
+  margin-bottom: 0px
+}
+/* ---------------------
+Header end*/
+
+/* ---------------------
+General design Start*/
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+nav ul{
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  padding: 8px 4px 1px 4px;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0645ad;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2 {
+  font-family: Georgia, Times, serif;
+  font-weight: 300;
+  border-bottom: 1px solid #aaaaaa;
+}
+h1 {
+font-size: 1.8em;
+margin: 15px 0 0 0;
+
+}
+h2{
+  font-size: 21px;
+}
+h4{
+  margin: 5px;
+  font-size: 15.8px;
+}
+main {
+  padding: 5px 16px;
+  min-width: 240px;
+  border-bottom: 1px solid #a7d7f9;
+  border-left: 1px solid #a7d7f9;
+  background: #ffffff;
+  font-size: 14px;
+}
+main p{
+  line-height: 22.4px;
+}
+.infobox, .toctitle, .imgbox{
+  background: #f6f6f6;
+  border: 1px solid #aaaaaa;
+}
+/* ---------------------
+General design End*/
+
+.sitesub{
+  font-size: 12.8px;
+  line-height: 23px;
+}
+.hatnote{
+  font-style: italic;
+  padding-left: 25px;
+}
+.wrapper {
+  order: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+.infobox {
+  box-sizing: border-box;
+  text-align: center;
+  width: 272px;
+  float: right;
+}
+figure{
+  margin: auto;
+}
+figurecaption{
+  font-size: 12px;
+}
+table{
+text-align: left;
+font-size: 12px;
+}
+.toctitle {
+  width: 123px;
+  line-height: 23px;
+  padding-left: 10px;
+}
+.toctitle ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+section{
+  display: block;
+}
+section::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.imgbox{
+  box-sizing: border-box;
+  text-align: center;
+  width: 245px;
+  margin: 10px;
+  float: right;
+}
+.categories{
+  background: #f9f9f9;
+  font: 14px san-serif;
+  height: auto;
+  margin-top: 10px;
+}
+.categorieslist{
+  display: inline-block;
+}
+.categorieslist li{
+  display: inline-block;
+  padding-left: 5px;
+}
+
+footer {
+  padding: 10px;
+  background: #f6f6f6;
+  font: 11px san-serif;
+}
+.footlinks ul{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.footlinks ul li{
+  display: inline-block;
+  line-height: 20px;
+}
+.footlinks ul li a{
+  padding-left: 5px;
+  line-height: 10px;
+}
+.buttonintheend{
+  display: flex;
+  justify-content: flex-end;
+
+}
