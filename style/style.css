@@ -46,6 +46,10 @@ section h2 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+section img{
+float: left;
+padding: 10px;
+}
 
 ul {
     list-style-type: square;
