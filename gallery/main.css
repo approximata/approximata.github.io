@@ -1,0 +1,97 @@
+
+
+body {
+	background: #222;
+	color: #eee;
+	margin-top: 20px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  max-width: 1000px
+}
+
+aside {
+  order: 0;
+  flex: 0 0 175px;
+  flex-direction: column;
+  max-height: 600px;
+  overflow: scroll;
+}
+
+.assidehead{
+  height: 50px;
+}
+
+.preview{
+  width: 100%;
+  display: flex;
+}
+
+.leftside,
+ .rightside{
+  margin: auto 0;
+}
+.upside,
+ .downside{
+  margin: 0 55px;
+}
+
+div.myButtonup input {
+    background:url(arrows.png) no-repeat;
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+div.myButtondown input {
+    background:url(arrowsdown.png) no-repeat;
+    cursor:pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+button {
+  font-size: 30px;
+  color: #eee;
+  background: none;
+  border: none;
+}
+
+button:hover{
+  font-size: 40px;
+}
+
+main img {
+  width: auto;
+  max-height: 600px;
+  margin: 2px;
+
+}
+.titleimage {
+  font-size: 15px;
+  padding: 0;
+  margin: 10px; auto;
+
+}
+
+.thumbnails{
+  width: 100%;
+  max-height: 120px;
+  margin: 0 auto;
+
+}
+
+.thumbnails img {
+	width: auto;
+	border: 4px solid #555;
+	padding: 1px;
+	margin: 10px;
+  align-items: center;
+  max-height: 90px;
+}
+
+.thumbnails img:hover {
+	border: 4px solid #00ccff;
+	cursor:pointer;
+}
