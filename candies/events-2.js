@@ -4,7 +4,6 @@ var button2 = document.querySelector('.lolipop');
 var candies = 80;
 var lolipop = 0;
 
-
 function createCandies() {
   candies ++;
   document.querySelector('.result').textContent = candies;
