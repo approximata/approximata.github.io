@@ -1,0 +1,108 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #50e3c2;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.content {
+  flex-direction: column;
+  width: 720px;
+  background-color: #f7f7f7;
+  margin: 20px auto;
+  justify-content: center;
+  align-content: space-between;
+}
+
+h1 {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    color: #aeaeae;
+}
+
+.inputfield {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;
+  align-content: space-between;*/
+  margin: 20px 50px;
+}
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px;
+}
+
+input[type="text"] {
+  min-width: 80%;
+  background-color: #ffffff;
+}
+
+.taskholder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  width: 90%;
+  color: #9b9b9b
+}
+
+/*input[type="checkbox"] {
+  border: 0px;
+  height: 28px;
+  width: 28px;
+  border-radius: 14px;
+}*/
+
+.button-text {
+    font-family: Lato-Regular, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+    width: 70px;
+    background-color: #df69e8;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.delete {
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+    margin-left: 40px;
+    background-image: url(bin.png);
+    border: none;
+}
+
+.check input {
+    position: relative;
+    z-index: -99;
+}
+
+.check span{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(checked.png);
+}
+
+.check input:checked + span{
+  background: url(unchecked.png);
+}
