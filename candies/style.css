@@ -1,0 +1,16 @@
+body{
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  background-color: grey;
+}
+
+.buttons{
+  flex: 1 0 auto;
+  margin: 20px;
+}
+
+p{
+  color: #c11f47;
+  font-size: 30px;
+}
