@@ -1,8 +1,9 @@
 'use strict';
 var button1 = document.querySelector('.candy');
 var button2 = document.querySelector('.lolipop');
-var candies = 80;
+var candies = 0;
 var lolipop = 0;
+var speed = 1;
 
 function createCandies() {
   candies ++;
@@ -10,11 +11,15 @@ function createCandies() {
 }
 
 function getLoliPop() {
-  if (candies > 100) {
-    candies -= 100;
+  if (candies > 10) {
+    candies -= 10;
     lolipop++;
     document.querySelector('.loli').textContent = lolipop;
     document.querySelector('.result').textContent = candies;
+    starvideo();
+    speddlolipop(lolipop);
+    console.log(speed);
+    speedup(speed);
   } else {
     alert("Not enough candies");
   }
@@ -38,7 +43,7 @@ function onYouTubeIframeAPIReady() {
       videoId: '3rYoRaxgOE0',
       playerVars: {
           color: 'white',
-          playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+          playlist: ''
       },
       events: {
           onReady: initialize
@@ -57,30 +62,6 @@ function initialize() {
       updateProgressBar();
   }, 1000);
 }
-// // This function is called by initialize()
-// function updateTimerDisplay(){
-//     // Update current time text display.
-//     $('#current-time').text(formatTime( player.getCurrentTime() ));
-//     $('#duration').text(formatTime( player.getDuration() ));
-// }
-//
-// function formatTime(time){
-//     time = Math.round(time);
-//
-//     var minutes = Math.floor(time / 60),
-//     seconds = time - minutes * 60;
-//
-//     seconds = seconds < 10 ? '0' + seconds : seconds;
-//
-//     return minutes + ":" + seconds;
-// }
-// $('#progress-bar').on('mouseup touchend', function (e) {
-//
-//     var newTime = player.getDuration() * (e.target.value / 100);
-//
-//     player.seekTo(newTime);
-//
-// });
 
 function starvideo() {
   player.playVideo();
@@ -91,16 +72,14 @@ function speedup(x) {
 
 function speddlolipop(loli) {
   var speedi = [0.5 ,1, 1.25, 1.5, 2];
-  if (loli < 3) {
-    speedup(speddi[loli]);
+  if (loli < 4) {
+    console.log(speedi[loli]);
+    speed = speedi[loli];
   } else {
-    speedup(speddi[4]);
+    console.log(speedi[4]);
+    speed = speedi[4];
   }
 }
 
-// speddlolipop(lolipop);
-
 button1.addEventListener('click', createCandies);
 button2.addEventListener('click', getLoliPop);
-button2.addEventListener('click', starvideo);
-button2.addEventListener('click', speddlolipop);
