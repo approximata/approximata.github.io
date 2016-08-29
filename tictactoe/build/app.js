@@ -14,7 +14,7 @@ let Game = React.createClass({
   },
 
   componentWillMount() {
-    if (typeof localStorage !== undefined && JSON.parse(localStorage.state).tiles.join('').length > 0) {
+    if (typeof localStorage.state !== undefined && JSON.parse(localStorage.state).tiles.join('').length > 0) {
       this.setState(JSON.parse(localStorage.state));
     }return;
   },
