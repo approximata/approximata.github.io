@@ -19,7 +19,7 @@ let Game = React.createClass({
     console.log(localStorage);
     console.log(localStorage.state);
     console.log(typeof localStorage.state);
-    if (typeof localStorage.state !== undefined && JSON.parse(localStorage.state).tiles.join('').length > 0) {
+    if (typeof localStorage.state !== 'undefined' && JSON.parse(localStorage.state).tiles.join('').length > 0) {
       console.log('setteli a localt');
       this.setState(JSON.parse(localStorage.state))
     } return;
