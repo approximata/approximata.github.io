@@ -15,14 +15,14 @@ let Game = React.createClass({
     };
   },
 
-  componentDidUpdate() {
-    localStorage.state = JSON.stringify(this.state);
-  },
-
   componentWillMount() {
-    if (JSON.parse(localStorage.state).tiles.join('').length > 0) {
+    if (typeof localStorage !== undefined && JSON.parse(localStorage.state).tiles.join('').length > 0) {
       this.setState(JSON.parse(localStorage.state))
     }
+  },
+
+  componentDidUpdate() {
+    localStorage.state = JSON.stringify(this.state);
   },
 
   checkBoard() {
