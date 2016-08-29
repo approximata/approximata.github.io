@@ -17,7 +17,7 @@ let Game = React.createClass({
 
   componentWillMount() {
     if (JSON.parse(localStorage.state).tiles.join('').length > 0) {
-      this.setState({ tiles: JSON.parse(localStorage.state).tiles })
+      this.setState(JSON.parse(localStorage.state))
     }
   },
 
