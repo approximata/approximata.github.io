@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myTicTacToe">
+  <head>
+    <meta charset="utf-8">
+    <title>tictactoe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="icon" href="favicon.png">
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/app.js"></script>
+  </head>
+    <body ng-controller="ticTacToeController">
+      <header>
+        <h1>simple angular tic tac toe</h1>
+      </header>
+      <div class="container">
+        <main class="main">
+          <div id="game">
+            <div class="tile" ng-repeat="cell in board[0]" ng-click="move(cell)">{{cell.value}}</div>
+            <div class="tile" ng-repeat="cell in board[1]" ng-click="move(cell)">{{cell.value}}</div>
+            <div class="tile" ng-repeat="cell in board[2]" ng-click="move(cell)">{{cell.value}}</div>
+          </div>
+          <div id="menu">
+            <h3 class="visible" >player {{currentPlayer}} turn</h3>
+            <h3 ng-show="winner">player {{ currentPlayer }} won!</h3>
+            <h3 ng-show="cat">draw game :(</h3>
+            <button class="btn btn-default" ng-click="reset()">reset game</button>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>
+         created by kbm
+        </p>
+      </footer>
+
+
+    </body>
+</html>

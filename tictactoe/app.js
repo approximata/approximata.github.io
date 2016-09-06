@@ -10,7 +10,7 @@ let Game = React.createClass({
         '', '', '',
       ],
       turn: 'o',
-      winner: 'n',
+      winner: 'n', // n if there is no winner
       mode: 'single',
     };
   },
