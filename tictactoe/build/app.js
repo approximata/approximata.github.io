@@ -56,8 +56,43 @@ let Game = React.createClass({
     }return;
   },
 
+  defenderLogic() {
+    const t = this.state.tiles;
+    const tIndex = [];
+    this.state.tiles.forEach((e, i) => {
+      tIndex.push(i);
+    });
+    const checkCriticalValue = function (a, b, c) {
+      return a + b + c === 'oo';
+    };
+    if (checkCriticalValue(t[0], t[1], t[2])) return [0, 1, 2];
+    if (checkCriticalValue(t[3], t[4], t[5])) return [3, 4, 5];
+    if (checkCriticalValue(t[6], t[7], t[8])) return [6, 7, 8];
+
+    if (checkCriticalValue(t[0], t[3], t[6])) return [0, 3, 6];
+    if (checkCriticalValue(t[1], t[4], t[7])) return [1, 4, 7];
+    if (checkCriticalValue(t[2], t[5], t[8])) return [2, 5, 8];
+
+    if (checkCriticalValue(t[0], t[4], t[8])) return [0, 4, 8];
+    if (checkCriticalValue(t[2], t[4], t[6])) return [2, 4, 6];
+
+    return tIndex;
+  },
+
+  getMatch(a, b) {
+    var matches = [];
+    for (var i = 0; i < a.length; i++) {
+      for (var e = 0; e < b.length; e++) {
+        if (a[i] === b[e]) matches.push(a[i]);
+      }
+    }
+    return matches;
+  },
+
   tileClickByComputer(player) {
     const tiles = this.state.tiles;
+    const defTiles = this.defenderLogic();
+    let newTiles = [];
     if (this.state.winner !== 'n') return;
     player = player === 'o' ? 'x' : 'o';
     let tileIndex = [];
@@ -66,7 +101,8 @@ let Game = React.createClass({
         tileIndex.push(i);
       }
     });
-    let newValue = tileIndex[Math.floor(tileIndex.length * Math.random())];
+    newTiles = this.getMatch(tileIndex, defTiles);
+    let newValue = newTiles[Math.floor(newTiles.length * Math.random())];
     tiles[newValue] = player;
     this.setState({ tiles: tiles, turn: player === 'o' ? 'x' : 'o', winner: this.checkBoard() });
   },
