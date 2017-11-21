@@ -14,7 +14,7 @@ var blackAndWhite = false;
 var img;
 
 function preload() {
-  img = loadImage('data/pic180.png');
+  img = loadImage('data/pic320.png');
 }
 
 function setup() {
