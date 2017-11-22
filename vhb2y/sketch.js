@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(img.width * 2, img.height * 2);
+  createCanvas(600, 600);
   textFont('Times');
   textSize(10);
   textAlign(LEFT, CENTER);
