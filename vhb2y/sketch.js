@@ -4,7 +4,7 @@
 
 var inputText = "Hoppá fácán! Happy birthday azaz hogy boldog születésnapot vagy mondhatnánk azt is hogy С днем рождения vagy valami ilyesmi";
 var fontSizeMax = 20;
-var fontSizeMin = 10;
+var fontSizeMin = 5;
 var spacing = 12; // line height
 var kerning = 0.5; // between letters
 
@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(img.width, img.height);
+  createCanvas(img.width * 2, img.height * 2);
   textFont('Times');
   textSize(10);
   textAlign(LEFT, CENTER);
